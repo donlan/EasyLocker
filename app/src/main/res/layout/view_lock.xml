@@ -1,0 +1,158 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lockAction.LockActivity">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/lock_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp" />
+
+        <TextClock
+            android:id="@+id/timeShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format12Hour="HH : mm"
+            android:gravity="center"
+            android:inputType="time"
+            android:textColor="#531304"
+            android:textSize="50sp"
+            android:typeface="serif" />
+
+        <EditText
+            android:id="@+id/time"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="numberPassword" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lock_one"
+                    style="@style/lock_item"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/lock_two"
+                    style="@style/lock_item"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/lock_three"
+                    style="@style/lock_item"
+                    android:background="@drawable/lock"
+                    android:text="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lock_four"
+                    style="@style/lock_item"
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/lock_five"
+                    style="@style/lock_item"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/lock_six"
+                    style="@style/lock_item"
+                    android:text="6" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lock_seven"
+                    style="@style/lock_item"
+                    android:text="7" />
+
+                <TextView
+                    android:id="@+id/lock_eight"
+                    style="@style/lock_item"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/lock_nine"
+                    style="@style/lock_item"
+                    android:text="9" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/lock_"
+                    style="@style/lock_item"
+                    android:text="Fun" />
+
+                <TextView
+                    android:id="@+id/lock_zero"
+                    style="@style/lock_item"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/lock_reset"
+                    style="@style/lock_item"
+                    android:text="重置" />
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

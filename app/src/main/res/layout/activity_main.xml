@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="@string/open_lock_service"
+            android:textSize="@dimen/setting_ac_base_size" />
+
+        <CheckBox
+            android:id="@+id/lock_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lock_switcher_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/current_lock_service_opening"
+        android:textSize="12sp" />
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="@string/start_lock_service_boot_on"
+            android:textSize="@dimen/setting_ac_base_size" />
+
+        <CheckBox
+            android:id="@+id/set_lock_onstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_lock_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:text="@string/set_lock_panel_bg"
+        android:textSize="@dimen/setting_ac_base_size" />
+
+    <Button
+        android:id="@+id/set_lock_top_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:text="@string/set_lock_top_text"
+        android:textSize="@dimen/setting_ac_base_size" />
+
+    <Button
+        android:id="@+id/set_lock_patter"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:text="@string/set_lock_patter"
+        android:textSize="@dimen/setting_ac_base_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_patter_text"
+        android:textSize="12sp" />
+
+
+</LinearLayout>
