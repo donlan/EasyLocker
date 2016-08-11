@@ -85,6 +85,18 @@ public class MainActivity extends BaseActivity {
                 settingPresenter.setLockPatter();
             }
         });
+        findView(R.id.set_lock_item_color).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingPresenter.setLockItemColor();
+            }
+        });
+        findView(R.id.set_lock_text_color).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingPresenter.setLockTextColor();
+            }
+        });
         settingPresenter.start();
     }
 
@@ -94,7 +106,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (BuildConfig.DEBUG) Log.d("MainActivity", "requestCode:" + requestCode);
         if (resultCode != RESULT_OK)
             return;
         if (requestCode == 2) {

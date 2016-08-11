@@ -20,6 +20,8 @@ import dong.lan.lock.BaseActivity;
 import dong.lan.lock.BasePresenter;
 import dong.lan.lock.LockService;
 import dong.lan.lock.R;
+import dong.lan.lock.utils.ActionCallback1;
+import dong.lan.lock.utils.ColorChoose;
 import dong.lan.lock.utils.Config;
 
 /**
@@ -127,7 +129,37 @@ public class SettingPresenter implements BasePresenter {
         configChanges.add(configChange);
     }
 
+    public void setLockItemColor() {
+        ColorChoose colorChoose = new ColorChoose(ac);
+        colorChoose.setSaveClickListener(new ActionCallback1() {
+            @Override
+            public void onActionDone(Object o) {
+                Integer c = (Integer) o;
+                Config.setInt(ac, Config.SP_LOCK_ITEM_COLOR, c);
+                for (int i = 0; i < configChanges.size(); i++) {
+                    configChanges.get(i).onLockItemColorChange(c);
+                }
+            }
+        });
+    }
+
+    public void setLockTextColor() {
+        ColorChoose colorChoose = new ColorChoose(ac);
+        colorChoose.setSaveClickListener(new ActionCallback1() {
+            @Override
+            public void onActionDone(Object o) {
+                Integer c = (Integer) o;
+                Config.setInt(ac, Config.SP_LOCK_TEXT_COLOR, c);
+                for (int i = 0; i < configChanges.size(); i++) {
+                    configChanges.get(i).onLockTextColorChange(c);
+                }
+            }
+        });
+    }
+
     public interface ConfigChange {
         void onPatterChange(String patter);
+        void onLockItemColorChange(int color);
+        void onLockTextColorChange(int color);
     }
 }
