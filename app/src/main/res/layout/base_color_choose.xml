@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_showColor"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <SeekBar
+        android:thumb="@drawable/red_circle"
+        android:id="@+id/sb_red"
+        android:layout_marginTop="16dp"
+        android:progress="50"
+        android:max="255"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <SeekBar
+        android:thumb="@drawable/green_circle"
+        android:layout_marginTop="16dp"
+        android:id="@+id/sb_green"
+        android:progress="150"
+        android:max="255"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <SeekBar
+        android:thumb="@drawable/blue_circle"
+        android:layout_marginTop="16dp"
+        android:id="@+id/sb_blue"
+        android:progress="100"
+        android:max="255"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="@string/save"
+        android:layout_margin="20dp"
+        android:background="@drawable/rect_blue_8"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+</LinearLayout>
