@@ -16,6 +16,8 @@ public class Config {
     public static final String SP_LOCK_BG="lock_bg";
     public static final String SP_TOP_TEXT="top_text";
     public static final String SP_LOCK_PATTER = "lock_patter";
+    public static final String SP_LOCK_ITEM_COLOR ="lock_item_color";
+    public static final String SP_LOCK_TEXT_COLOR ="lock_text_color";
 
 
     private volatile static SharedPreferences sp;
@@ -84,6 +86,14 @@ public class Config {
 
     public static boolean getBoolean(Context context, String key) {
         return getSP(context).getBoolean(key, false);
+    }
+
+    public static void setInt(Context context, String key, int i) {
+        getSP(context).edit().putInt(key, i).apply();
+    }
+
+    public static int getInt(Context context, String key) {
+        return getSP(context).getInt(key, 0);
     }
 
 }
