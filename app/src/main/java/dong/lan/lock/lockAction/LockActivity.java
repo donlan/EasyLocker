@@ -46,6 +46,16 @@ public class LockActivity extends BaseActivity implements SettingPresenter.Confi
         viewManager.updatePatter(patter);
     }
 
+    @Override
+    public void onLockItemColorChange(int color) {
+        viewManager.updateLockItemColor(color);
+    }
+
+    @Override
+    public void onLockTextColorChange(int color) {
+        viewManager.updateLockTextColor(color);
+    }
+
     //锁频页面屏蔽返回键
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
