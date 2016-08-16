@@ -20,6 +20,7 @@ import dong.lan.lock.BaseActivity;
 import dong.lan.lock.BuildConfig;
 import dong.lan.lock.LockService;
 import dong.lan.lock.R;
+import dong.lan.lock.lockAction.intentAction.LockToAppActivity;
 import dong.lan.lock.utils.ActionCallback;
 import dong.lan.lock.utils.Config;
 
@@ -95,6 +96,12 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 settingPresenter.setLockTextColor();
+            }
+        });
+        findView(R.id.set_lock_intent_app).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LockToAppActivity.class));
             }
         });
         settingPresenter.start();
