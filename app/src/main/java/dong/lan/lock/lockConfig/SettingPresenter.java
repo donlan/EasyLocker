@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +39,11 @@ public class SettingPresenter implements BasePresenter {
     public void start() {
         SharedPreferences sp = Config.getSP(ac);
         serviceIntent = new Intent(ac, LockService.class);
+    }
+
+    @Override
+    public void bindView(Fragment view) {
+
     }
 
     public SettingPresenter(Activity ac) {
@@ -122,13 +128,14 @@ public class SettingPresenter implements BasePresenter {
     }
 
     private static List<ConfigChange> configChanges = new ArrayList<>();
-
+    //添加配置改变的回调监听
     public static void addConfigChangeListener(ConfigChange configChange) {
         if (configChanges.contains(configChange))
             return;
         configChanges.add(configChange);
     }
 
+    //设置锁屏页面按钮颜色
     public void setLockItemColor() {
         ColorChoose colorChoose = new ColorChoose(ac);
         colorChoose.setSaveClickListener(new ActionCallback1() {
@@ -143,6 +150,7 @@ public class SettingPresenter implements BasePresenter {
         });
     }
 
+    //设置锁屏页面字体的颜色
     public void setLockTextColor() {
         ColorChoose colorChoose = new ColorChoose(ac);
         colorChoose.setSaveClickListener(new ActionCallback1() {
@@ -156,6 +164,10 @@ public class SettingPresenter implements BasePresenter {
             }
         });
     }
+
+    /*
+    锁屏配置改变的回调接口定义
+     */
 
     public interface ConfigChange {
         void onPatterChange(String patter);
