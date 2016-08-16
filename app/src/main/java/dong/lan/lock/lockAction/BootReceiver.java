@@ -3,8 +3,9 @@ package dong.lan.lock.lockAction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
+import android.util.Log;
 
+import dong.lan.lock.BuildConfig;
 import dong.lan.lock.LockService;
 import dong.lan.lock.utils.Config;
 
@@ -18,8 +19,11 @@ public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
         {
-            if(Config.getBootOnEnable(context))
-            context.startService(new Intent(context,LockService.class));
+            if(Config.getBootOnEnable(context)) {
+                LockService.KILL = false;
+                context.startService(new Intent(context, LockService.class));
+                if (BuildConfig.DEBUG) Log.d("BootReceiver", "BOOT SERVICE");
+            }
         }
     }
 }
