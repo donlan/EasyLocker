@@ -1,5 +1,6 @@
 package dong.lan.lock;
 
+import android.support.v4.app.Fragment;
 import android.util.SparseArray;
 import android.view.View;
 
@@ -13,5 +14,5 @@ import java.util.List;
  */
 public  interface BasePresenter {
     void start();
-
+    void bindView(Fragment view);
 }
