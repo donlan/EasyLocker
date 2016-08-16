@@ -134,7 +134,8 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <Button
+                <CheckBox
+                    android:checked="false"
                     android:id="@+id/lock_"
                     style="@style/lock_item"
                     android:text="Fun" />
