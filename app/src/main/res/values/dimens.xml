@@ -8,4 +8,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="setting_ac_base_size">18sp</dimen>
     <dimen name="setting_ac_info_size">16sp</dimen>
+    <dimen name="lock_item_margin">4dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="app_icon_size">45dp</dimen>
 </resources>

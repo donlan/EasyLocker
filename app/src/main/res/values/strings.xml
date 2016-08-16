@@ -70,4 +70,12 @@
     <string name="set_lock_top_text">设置锁屏顶部文字</string>
     <string name="set_lock_patter">设置密码匹配模型</string>
     <string name="setting_patter_text">使用一个AB表示对应的小时的数字，使用CD表示分钟对应的数字。例如ABCD 这能匹配12:34的时间，使用AABCDD匹配12:34时需要输入112344</string>
+    <string name="save">保存</string>
+    <string name="set_lock_item_color">设置锁屏按钮颜色</string>
+    <string name="set_lock_text_color">设置锁屏字体颜色</string>
+    <string name="empty">无设置</string>
+    <string name="title_activity_lock_to_app">LockToAppActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="set_lock_intent_apps">设置锁屏应用跳转</string>
+    <string name="lock_to_app_activity_label">设置锁屏跳转应用</string>
 </resources>
