@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
+
 /**
  * Created by 梁桂栋 on 2016年08月09日 15:18.
  * Email:760625325@qq.com
  */
 public class BaseActivity extends AppCompatActivity {
-
     FrameLayout container;
     View content;
     @Override
@@ -31,7 +31,7 @@ public class BaseActivity extends AppCompatActivity {
 
 
     public void Show(String str){
-        Snackbar.make(container,str,1000).show();
+        Snackbar.make(container,str,Snackbar.LENGTH_SHORT).show();
     }
 
     public View findView(int id) {
