@@ -27,6 +27,7 @@ public class LockService extends Service {
         super.onCreate();
         running = true;
         lockIntent = new Intent(LockService.this, LockActivity.class);
+        //因为Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag
         lockIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         registerComponentCallbacks(new ComponentCallbacks() {
             @Override
