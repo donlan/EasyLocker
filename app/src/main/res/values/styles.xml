@@ -14,7 +14,18 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="LockViewAnim" parent="AppTheme.NoActionBar">
+        <item name="android:activityCloseEnterAnimation">@anim/zoom_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/zoom_exit</item>
+        <item name="android:activityOpenEnterAnimation">@anim/zoom_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/zoom_exit</item>
+        <item name="android:windowExitAnimation">@anim/zoom_exit</item>
+        <item name="android:windowEnterAnimation">@anim/zoom_enter</item>
+    </style>
+
     <style name="lock_item">
+        <item name="android:layout_marginLeft">@dimen/lock_item_margin</item>
+        <item name="android:layout_marginRight">@dimen/lock_item_margin</item>
         <item name="android:background">@drawable/lock</item>
         <item name="android:button">@null</item>
         <item name="android:gravity">center</item>
@@ -24,5 +35,6 @@
         <item name="android:minWidth">@dimen/lock_min_size</item>
         <item name="android:textSize">@dimen/lock</item>
     </style>
+
 
 </resources>
